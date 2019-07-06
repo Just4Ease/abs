@@ -93,20 +93,23 @@ const vue = new Vue({
 	created() {
 		vm = this;
 		let imgEntry;
-		// let imgExit;
+		let imgExit;
 		setTimeout(() => {
 			imgEntry = document.getElementById('entry-img');
-			imgEntry.src = 'http://admin:admin@192.168.1.109/tmpfs/auto.jpg';
+			imgExit = document.getElementById('exit-img');
+			imgEntry.src = 'http://admin:admin@192.168.1.110/tmpfs/auto.jpg';
+			imgExit.src = 'http://admin:admin@192.168.1.109/tmpfs/auto.jpg';
 			setInterval(() => {
 				vm.time = new Date(Date.now()).getTime();
-				imgEntry.src = `http://192.168.1.109/tmpfs/auto.jpg${vm.time}`;
+				imgEntry.src = `http://192.168.1.110/tmpfs/auto.jpg${vm.time}`;
+				imgExit.src = `http://192.168.1.109/tmpfs/auto.jpg${vm.time}`;
 			}, 90);
 			setInterval(async () => {
 				if (!vm.processing) {
 					// At every second. Process the image and wait for a response.
 					vm.processing = true;
 					await vm.getPlate('ENTRY', 'entry-img');
-					// vm.getPlate('EXIT', 'exit-img');
+					await vm.getPlate('EXIT', 'exit-img');
 				}
 			}, 90);
 		}, 1000);

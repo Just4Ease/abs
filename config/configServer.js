@@ -63,10 +63,10 @@ export default (io, abs, express) => {
 			let url;
 			switch (point) {
 				case 'ENTRY':
-					url = 'http://192.168.1.109/tmpfs/auto.jpg';
+					url = 'http://192.168.1.110/tmpfs/auto.jpg';
 					break;
 				case 'EXIT':
-					url = 'http://192.168.1.110/tmpfs/auto.jpg';
+					url = 'http://192.168.1.109/tmpfs/auto.jpg';
 					break;
 				default:
 					url = null;

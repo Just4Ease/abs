@@ -21,6 +21,7 @@
 		"express": "^4.17.1",
 		"file-saver": "^2.0.2",
 		"isemail": "^3.1.1",
+		"johnny-five": "^1.1.0",
 		"lodash": "^4.17.5",
 		"moment": "^2.21.0",
 		"morgan": "^1.8.2",
@@ -28,6 +29,10 @@
 		"nodemailer": "^6.2.1",
 		"nodemon": "^1.19.1",
 		"pug": "^2.0.3",
+		"rapi": "0.0.0",
+		"raspi": "^6.0.1",
+		"raspi-gpio": "^6.2.1",
+		"raspi-io": "^10.0.2",
 		"request": "^2.81.0",
 		"socket.io": "^2.0.4",
 		"wkhtmltopdf": "^0.3.4"

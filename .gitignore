@@ -8,6 +8,8 @@ yarn-debug.log*
 .vscode
 .env
 node_modules/
+abs-extraction/*
+abs-licence/*
 *.suo
 *.ntvs*
 *.njsproj
