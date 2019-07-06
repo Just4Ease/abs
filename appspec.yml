@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp/nbuild-admin-v1
+permissions:
+  - object: /tmp/nbuild-admin-v1
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  BeforeInstall:
+    - location: before_install.sh
+      runas: ubuntu
+  AfterInstall:
+    - location: after_install.sh
+      runas: ubuntu

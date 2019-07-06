@@ -1,0 +1,95 @@
+
+#content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	/*font-family: sans-serif;*/
+	/*!*padding-top: 130px;*!*/
+	/*min-height: 800px;*/
+	height: 100%;
+	width: 100%;
+	display: block;
+	background: black;
+	/*margin: 0 !important;*/
+}
+
+.cams, .activity-logs {
+	display: block;
+	height: 100%;
+	min-height: 800px;
+	float: left;
+}
+
+.cams {
+	padding-top: 30px;
+	background: #008477;
+}
+
+
+.activity-logs {
+	/*width: 70%;*/
+	padding-top: 30px;
+	background: #212529;
+	color: white;
+}
+
+.cam-item {
+	width: 90%;
+	background: white;
+	margin: 15px auto 45px;
+	display: block;
+	height: 300px;
+	border-radius: 8px;
+	box-shadow: 0px 1px 14px 1px rgba(179, 179, 179, 0.21);
+}
+
+.cam-text {
+	position: relative;
+	/*bottom: -155px;*/
+	left: 20px;
+}
+
+.icon-expand {
+	position: absolute;
+	top: 25px;
+	right: 45px;
+	font-size: 25px;
+}
+
+.settings-pane {
+	height: 50px;
+	background: #663399;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
+
+body, html {
+	margin: 0 !important;
+	/*overflow: hidden;*/
+	background: grey;
+}
+
+.activity-table {
+	min-height: 600px;
+	background: #000000;
+}
+
+.plate-detected {
+	width: 85%;
+}
+
+/*#entry-img{*/
+/*	width: 100%;*/
+/*	height: 100%;*/
+/*	!*background: black;*!*/
+/*	display: block;*/
+/*}*/

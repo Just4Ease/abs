@@ -1,0 +1,7 @@
+dependencies:
+  pre:
+    - pip install numpy
+    - pip install scipy
+
+test:
+  - nosetests tests
