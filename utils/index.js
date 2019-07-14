@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { spawnSync } from 'child_process';
 import { encode } from 'base-64';
+import caller from 'grpc-caller';
 
 import fs from 'fs';
 
@@ -122,3 +123,19 @@ export const executeExtraction = (url) => {
 		time: new Date(Date.now())
 	};
 };
+
+const GateKeeperRPC = caller('192.168.8.104:8001', 'gate.proto', 'Admin');
+
+export const sendGateCommand = async (point) => {
+	switch (point) {
+		case 'ENTRY':
+			return GateKeeperRPC.openEntryGate();
+		case 'EXIT':
+			return GateKeeperRPC.openExitGate();
+		default:
+		// Do nothing.
+	}
+	return true;
+};
+
+setTimeout(() => sendGateCommand('ENTRY'), 5000);

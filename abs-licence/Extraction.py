@@ -55,12 +55,13 @@ def execute_ALPR():
     root_folder = os.path.dirname(os.path.realpath(__file__))
     models_folder = os.path.join(root_folder, 'ml_models')
 
-    import requests
+    # import requests
 
-    r = requests.get(url, auth=('admin', 'admin'))
-    file = open(imagepath, "w")
-    file.write(r.content)
-    file.close()
+    # r = requests.get(url, auth=('admin', 'admin'))
+    # file = open(imagepath, "w")
+    # file.write(r.content)
+    # file.close()
+    imagepath=url
     pre_process = PreProcess(imagepath)
 
 
